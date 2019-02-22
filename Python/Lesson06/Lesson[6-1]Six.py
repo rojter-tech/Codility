@@ -1,6 +1,7 @@
 def solution(A):
-    return 1
+    arrayset = set(A)
+    return len(arrayset)
 
 
-A = [1,1,0,1]
+A = [2,1,1,2,3,1]
 print(solution(A))

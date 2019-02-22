@@ -23,7 +23,8 @@ def solution(A):
     return maxtripleprod(elemcombo)
 
 
-A = [4, 5, 1, 0]
+N = 50000
+A1 = N*[-1]
+A2 = N*[1]
+A = A1 + A2
 print(solution(A))
-
-A = [-5, 5, -5, 4]

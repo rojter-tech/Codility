@@ -1,7 +1,6 @@
 # BinaryGap
 
 def solution(N):
-    # write your code in Python 3.6
     thebinary = bin(N)
     j = 0
     onesposition = []

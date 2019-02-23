@@ -1,9 +1,7 @@
-import random
-
 def solution(A):
-    oor = 10**3 + 1
-    maxThree = 3*[-oor]
-    minTwo = 2*[oor]
+    outofrange = 10**3 + 1
+    maxThree = 3*[-outofrange]
+    minTwo = 2*[outofrange]
 
     for elem in A:
         if elem >= maxThree[0]:
@@ -16,21 +14,22 @@ def solution(A):
         elif elem >= maxThree[2]:
             maxThree[2] = elem
         
-        if -elem >= -minTwo[0]:
-            minTwo[1] = minTwo[0]
-            minTwo[0] = elem
-        elif -elem >= -minTwo[1]:
+        if elem <= minTwo[1]:
+            minTwo[0] = minTwo[1]
             minTwo[1] = elem
+        elif elem <= minTwo[0]:
+            minTwo[0] = elem
     
-    maxval = maxThree[1]*maxThree[2]
-    top = maxThree[0]
-    maxval *= top
-    minval = minTwo[0]*minTwo[1]*top
+    combo_top = maxThree[0]*maxThree[1]*maxThree[2]
+    combo_bottom = maxThree[0]*minTwo[0]*minTwo[1]
 
-    return max(maxval,minval)
+    if combo_top > combo_bottom:
+        return combo_top
+    else:
+        return combo_bottom
 
 N = 50000
-A1 = N*[-1]
+A1 = N*[-2]
 A2 = N*[1]
 A = A1 + A2
 print(solution(A))

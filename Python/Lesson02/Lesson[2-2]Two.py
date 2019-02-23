@@ -1,3 +1,6 @@
+#Author: Daniel Reuter
+#Github: https://github.com/rojter-tech
+
 def solution(A, K):
     if len(A) == 0:
         return A

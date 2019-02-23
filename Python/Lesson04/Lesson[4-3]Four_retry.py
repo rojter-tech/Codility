@@ -1,3 +1,6 @@
+#Author: Daniel Reuter
+#Github: https://github.com/rojter-tech
+
 def keepallowedrange(A):
     Atmp = []
     countelem = 0

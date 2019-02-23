@@ -1,7 +1,5 @@
-# you can write to stdout for debugging purposes, e.g.
-# print("this is a debug message")
-
-
+#Author: Daniel Reuter
+#Github: https://github.com/rojter-tech
 
 def solution(X, A):
     N = len(A)

@@ -1,3 +1,6 @@
+#Author: Daniel Reuter
+#Github: https://github.com/rojter-tech
+
 def solution(N, A):
     countersList = N*[0]
     M = len(A)

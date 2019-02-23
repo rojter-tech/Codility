@@ -1,3 +1,6 @@
+#Author: Daniel Reuter
+#Github: https://github.com/rojter-tech
+
 def solution(A):
     n = len(A)
     minavg = 10**5 + 1

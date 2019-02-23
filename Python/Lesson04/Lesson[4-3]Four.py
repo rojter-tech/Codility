@@ -1,3 +1,6 @@
+#Author: Daniel Reuter
+#Github: https://github.com/rojter-tech
+
 def organizeset(A):
     setmax = max(A)
     upperlimit = 10**5

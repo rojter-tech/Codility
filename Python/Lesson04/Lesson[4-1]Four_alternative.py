@@ -1,3 +1,6 @@
+#Author: Daniel Reuter
+#Github: https://github.com/rojter-tech
+
 def checkpair(A):
     for i in range(len(A) - 1):
         if A[i] == A[i + 1]:

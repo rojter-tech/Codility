@@ -1,4 +1,6 @@
-# BinaryGap
+#BinaryGap
+#Author: Daniel Reuter
+#Github: https://github.com/rojter-tech
 
 def solution(N):
     thebinary = bin(N)

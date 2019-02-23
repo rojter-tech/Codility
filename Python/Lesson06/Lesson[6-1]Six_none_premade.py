@@ -1,3 +1,6 @@
+#Author: Daniel Reuter
+#Github: https://github.com/rojter-tech
+
 def quicksort(A):
     n = len(A)
     if n == 0: return []

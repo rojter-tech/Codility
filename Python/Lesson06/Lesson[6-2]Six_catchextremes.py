@@ -1,3 +1,8 @@
+#MaxProductOfThree
+#Maximize A[P] * A[Q] * A[R] for any triplet (P, Q, R).
+#Author: Daniel Reuter
+#Github: https://github.com/rojter-tech
+
 def solution(A):
     outofrange = 10**3 + 1
     maxThree = 3*[-outofrange]

@@ -1,3 +1,6 @@
+#Author: Daniel Reuter
+#Github: https://github.com/rojter-tech
+
 def solution(X, Y, D):
     interval = Y - X
     stepfromborder = interval%D

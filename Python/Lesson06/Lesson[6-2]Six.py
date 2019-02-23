@@ -1,3 +1,8 @@
+#MaxProductOfThree
+#Maximize A[P] * A[Q] * A[R] for any triplet (P, Q, R).
+#Author: Daniel Reuter
+#Github: https://github.com/rojter-tech
+
 import itertools as gen
 
 def maxtripleprod(elemcombo):
@@ -24,7 +29,7 @@ def solution(A):
 
 
 N = 50000
-A1 = N*[-1]
+A1 = N*[-2]
 A2 = N*[1]
 A = A1 + A2
 print(solution(A))

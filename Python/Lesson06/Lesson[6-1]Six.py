@@ -1,3 +1,7 @@
+
+#Author: Daniel Reuter
+#Github: https://github.com/rojter-tech
+
 def solution(A):
     arrayset = set(A)
     return len(arrayset)

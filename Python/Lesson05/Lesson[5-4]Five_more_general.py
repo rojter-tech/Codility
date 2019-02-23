@@ -1,3 +1,6 @@
+#Author: Daniel Reuter
+#Github: https://github.com/rojter-tech
+
 def solution(A, B, K):
     rangefits = int((B - A)/K)
     firstelemrest = A%K

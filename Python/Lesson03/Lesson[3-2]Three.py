@@ -1,3 +1,6 @@
+#Author: Daniel Reuter
+#Github: https://github.com/rojter-tech
+
 def solution(A):
     if len(A) == 1:
         if A[0] == 1:

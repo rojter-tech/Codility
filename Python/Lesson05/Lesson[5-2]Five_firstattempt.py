@@ -1,3 +1,6 @@
+#Author: Daniel Reuter
+#Github: https://github.com/rojter-tech
+
 def minimalfrompart(p, q, onesIndex, twosIndex, threesIndex, foursIndex):
     for elem in onesIndex:
         if elem >= p and elem <= q:

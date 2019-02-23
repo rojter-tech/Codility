@@ -1,3 +1,6 @@
+#Author: Daniel Reuter
+#Github: https://github.com/rojter-tech
+
 def letter_presums(A):
     n = len(A)
     ASums = (n + 1)*[0];    CSums = (n + 1)*[0]

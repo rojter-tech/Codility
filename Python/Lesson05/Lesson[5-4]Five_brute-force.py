@@ -1,3 +1,6 @@
+#Author: Daniel Reuter
+#Github: https://github.com/rojter-tech
+
 def solution(A, B, K):
     trackdiv = 0
     for i in range(A,B+1):

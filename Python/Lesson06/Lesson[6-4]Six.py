@@ -6,11 +6,11 @@
 #Thickness at end-points solution
 def solution(A):
     n = len(A)
-    edgepoints, edgesum, intersectsum = 2*n*[0], 0, 0
+    edgepoints, edgesum, intersectsum = 2*n*[[0,0]], 0, 0
 
     for i in range(2*n):
         edgepoints[i] = [int(i/2) - A[int(i/2)]*(-1)**i, (-1)**i]
-    edgepoints.sort(key=lambda x: (x[0], -x[1]))
+    edgepoints.sort(key=lambda λ: [λ[0], -λ[1]])
 
     for edge in edgepoints:
         edgesum += edge[1]

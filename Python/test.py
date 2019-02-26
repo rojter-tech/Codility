@@ -1,4 +1,2 @@
-count = 0
-for i in range(10):
-    count += 1
-print(count)
+char = hex(234)
+print(char)

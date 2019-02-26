@@ -3,6 +3,7 @@
 #Author: Daniel Reuter
 #Github: https://github.com/rojter-tech
 
+#Thickness at end-points solution
 def solution(A):
     n = len(A)
     edgepoints, edgesum, intersectsum = 2*n*[0], 0, 0
@@ -12,8 +13,8 @@ def solution(A):
     edgepoints.sort(key=lambda x: (x[0], -x[1]))
 
     for edge in edgepoints:
-        if edge[1] > 0: intersectsum += edgesum
         edgesum += edge[1]
+        if edge[1] == -1: intersectsum += edgesum
         if intersectsum > 1E7: return -1
 
     return intersectsum

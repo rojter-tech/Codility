@@ -3,18 +3,32 @@
 #Author: Daniel Reuter
 #Github: https://github.com/rojter-tech
 
-#Brute-Force
 def solution(A):
     n = len(A)
-    nextminimums = n*[0]
+    minimums = n*[0]
+    maximums = n*[0]
+    encaps = n*[0]
+    countsingular = 0
     for i in range(n):
-        for j in range(i,n-1):
-            thismax = i + A[i]
-            nextmin = j + 1 - A[j+1]
-            if thismax >= nextmin:
-                nextminimums[i] += 1
-    return sum(nextminimums)
+        thismax = i + A[i]
+        if thismax < n-1:
+            encaps[i] = thismax - i
+        else:
+            encaps[i] = n - 1 - i
+        thismin = i - A[i]
+        thismax = i + A[i]
+        minimums[i] = thismin
+        maximums[i] = thismax
+        if A[i] == 0:
+            countsingular += 1
+    print(encaps)
+    setlengthmaxmins = len(set(minimums) | set(maximums))
+    commonmaxmins = 2*n - setlengthmaxmins
+
+    return sum(encaps) + commonmaxmins - countsingular
 
 
 A = [1,5,2,1,4,0]
+#A = [1,1,1]
+#A = []
 print(solution(A))

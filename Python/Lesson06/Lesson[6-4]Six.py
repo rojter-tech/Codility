@@ -19,7 +19,6 @@ def solution(A):
 
     return intersectsum
 
-
 if __name__ == '__main__':
     print('Testing solutions..')
     assert solution([1, 5, 2, 1, 4, 0]) == 11

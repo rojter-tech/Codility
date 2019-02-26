@@ -5,30 +5,25 @@
 
 def solution(A):
     n = len(A)
-    minimums = n*[0]
-    maximums = n*[0]
-    encaps = n*[0]
-    countsingular = 0
-    for i in range(n):
-        thismax = i + A[i]
-        if thismax < n-1:
-            encaps[i] = thismax - i
-        else:
-            encaps[i] = n - 1 - i
-        thismin = i - A[i]
-        thismax = i + A[i]
-        minimums[i] = thismin
-        maximums[i] = thismax
-        if A[i] == 0:
-            countsingular += 1
-    print(encaps)
-    setlengthmaxmins = len(set(minimums) | set(maximums))
-    commonmaxmins = 2*n - setlengthmaxmins
+    edgepoints, edgesum, intersectsum = 2*n*[0], 0, 0
 
-    return sum(encaps) + commonmaxmins - countsingular
+    for i in range(2*n):
+        edgepoints[i] = [int(i/2) - A[int(i/2)]*(-1)**i, (-1)**i]
+    edgepoints.sort(key=lambda x: (x[0], -x[1]))
+
+    for edge in edgepoints:
+        if edge[1] > 0: intersectsum += edgesum
+        edgesum += edge[1]
+        if intersectsum > 1E7: return -1
+
+    return intersectsum
 
 
-A = [1,5,2,1,4,0]
-#A = [1,1,1]
-#A = []
-print(solution(A))
+if __name__ == '__main__':
+    print('Testing solutions..')
+    assert solution([1, 5, 2, 1, 4, 0]) == 11
+    assert solution([]) == 0
+    assert solution([0,1]) == 1
+    assert solution([0, 0]) == 0
+    assert solution([1,0,0,3]) == 4
+    print('Test passed!')

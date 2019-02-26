@@ -10,3 +10,7 @@ def solution(A):
         if intersections > 10E6:
             return -1
     return intersections
+
+A = [1,5,2,1,4,0]
+print(solution(A))
+print()

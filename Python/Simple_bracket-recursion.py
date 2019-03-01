@@ -14,23 +14,18 @@ def bracketrecurs(S):
             if elem == '(' or elem == ')':
                 if str_concat == "":
                     str_concat = "1"
-                return str(float(str_concat) * float(bracketrecurs(tail)))
+                multiply = int(float(str_concat))
+                numbertail = int(bracketrecurs(tail))
+                multistring = str(multiply * numbertail)
+                return multistring
         
             pos += 1
     
     return S
 
-#(1(1(1)))
-#1(1(1)))
-#1(1)))
-#1)))
-#))
-#)
-#
-
 if __name__ == "__main__":
-    S = "(1(1(1)2)1)3"
+    S = "(2(3))"
     print(bracketrecurs(S))
     S2 = 4*S
-    print(S2)
+    #print(S2)
 

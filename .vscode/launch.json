@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - LessonSixFour_codility",
+            "request": "launch",
+            "mainClass": "LessonSixFour_codility"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - LessonSixFour",
             "request": "launch",
             "mainClass": "LessonSixFour"
